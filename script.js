@@ -27,7 +27,7 @@ var color_choices = [
 
 var available_models = {
   "microsoft-coco": {
-    name: "Microsoft COCO",
+    name: "testing",
     version: 9,
     video: "",
     confidence: 0.6,
