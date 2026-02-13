@@ -26,9 +26,9 @@ var color_choices = [
 ];
 
 var available_models = {
-  "microsoft-coco": {
-    name: "Microsoft COCO",
-    version: 9,
+  "amongus2_0": {
+    name: "amongus",
+    version: 2,
     video: "",
     confidence: 0.6,
     imageGrid: [
