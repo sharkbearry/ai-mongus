@@ -119,8 +119,8 @@ document.getElementById("mobile-predict").onclick = () => {
     document.getElementById("mobile-picture").style.display = "block";
 };
 
-var current_model_name = "microsoft-coco";
-var current_model_version = 9;
+var current_model_name = "amongus2_0";
+var current_model_version = 2;
 const API_KEY = "rf_u9ZrdhV88sbVpYmrFngn3vfFOOB3";
 
 const CAMERA_ACCESS_URL =
