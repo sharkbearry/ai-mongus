@@ -83,16 +83,6 @@ var available_models = {
   },
 };
 
-// populate model select
-var model_select = document.getElementById("model-select");
-
-for (var item in available_models) {
-  var option = document.createElement("option");
-  option.text = available_models[item]["name"];
-  option.value = item;
-  model_select.add(option);
-}
-
 var current_model_name = "amongus2_0";
 const API_KEY = "rf_u9ZrdhV88sbVpYmrFngn3vfFOOB3";
 const DETECT_API_KEY = "4l5zOVomQmkAqlTJPVKN";
@@ -116,8 +106,8 @@ window.addEventListener("scroll", function () {
 });
 
 async function apiRequest(image) {
-  var version = available_models[current_model_name]["version"];
-  var name = current_model_name;
+  // var version = available_models[current_model_name]["version"];
+  // var name = current_model_name;
 
   var url =
     "https://detect.roboflow.com/" +
