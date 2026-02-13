@@ -28,58 +28,22 @@ var color_choices = [
 ];
 
 var available_models = {
-    "microsoft-coco": {
-        "name": "Microsoft COCO",
-        "version": 9,
-        "video": "",
-        "confidence": 0.6,
-        "imageGrid": [
+    "amongus2_0": {
+        name: "amongus",
+        version: 2,
+        video: "",
+        confidence: 0.6,
+        imageGrid: [
             "https://media.roboflow.com/homepage/000000000544_jpg.rf.f588881eb2c2829187797d304e3a941d.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1675241561128",
+
             "https://media.roboflow.com/homepage/000000000064_jpg.rf.654457cc709530d859531d38bb990ec8.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1675241561271",
+
             "https://media.roboflow.com/homepage/000000000321_jpg.rf.c38501b6894584ac21c859cd4390e75e.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1675241561164",
-            "https://media.roboflow.com/homepage/000000000250_jpg.rf.47b3fb8b6ed29e369cc361720b5f21f5.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1675241560704"
+
+            "https://media.roboflow.com/homepage/000000000250_jpg.rf.47b3fb8b6ed29e369cc361720b5f21f5.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1675241560704",
         ],
-        "model": null
+        model: null,
     },
-    "construction-site-safety": {
-        "name": "Worksite Safety",
-        "version": 27,
-        "confidence": 0.3,
-        "video": "https://media.roboflow.com/homepage/Worksite_Safety/Screen_Recording_2023-02-15_at_11.09.23_AM.mov?ik-sdk-version=javascript-1.4.3&updatedAt=1676479657201",
-        "imageGrid": [
-            "https://media.roboflow.com/homepage/Worksite_Safety/Screenshot_2023-02-15_at_11.07.02_AM_Large.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1676480555712",
-            "https://media.roboflow.com/homepage/Worksite_Safety/Screenshot_2023-02-15_at_11.06.04_AM_Large.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1676480555618",
-            "https://media.roboflow.com/homepage/Worksite_Safety/001548_jpg.rf.01a671015cc2ceefdbaf0801b4913d12.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676479636902",
-            "https://media.roboflow.com/homepage/Worksite_Safety/image_818_jpg.rf.d804cf6e52c8a47cf294d98c587594d1.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676479636223"
-        ],
-        "model": null
-    },
-    "containers-detection-db0c2": {
-        "name": "Logistics",
-        "version": 1,
-        "confidence": 0.3,
-        "video": "https://media.roboflow.com/homepage/Logistics/Screen_Recording_2023-02-15_at_11.36.30_AM.mov?ik-sdk-version=javascript-1.4.3&updatedAt=1676479651726",
-        "imageGrid": [
-            "https://media.roboflow.com/homepage/Logistics/pexels-fakhri-ailatat-6585817_Medium.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1676540925200",
-            "https://media.roboflow.com/homepage/Logistics/pexels-zeka-alrizki-12779104_Medium.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1676540925006",
-            "https://media.roboflow.com/homepage/Logistics/pexels-frans-van-heerden-1624695_Medium.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1676540924972",
-            "https://media.roboflow.com/homepage/Logistics/pexels-freestocksorg-122164_Medium.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1676540924810"
-        ],
-        "model": null
-    },
-    "sku-110k": {
-        "name": "Retail",
-        "version": 4,
-        "confidence": 0.3,
-        "video": "https://media.roboflow.com/homepage/Retail/Screen_Recording_2023-02-15_at_10.29.04_AM.mov?ik-sdk-version=javascript-1.4.3&updatedAt=1676479650130",
-        "imageGrid": [
-            "https://media.roboflow.com/homepage/Retail/Screenshot_2023-02-15_at_9.47.00_AM_Medium.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1676541028965",
-            "https://media.roboflow.com/homepage/Retail/Screenshot_2023-02-15_at_9.46.41_AM_Medium.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1676541028957",
-            "https://media.roboflow.com/homepage/Retail/pexels-nothing-ahead-7451957_Medium.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1676541028849",
-            "https://media.roboflow.com/homepage/Retail/Screenshot_2023-02-15_at_9.49.03_AM_Medium.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1676541028405"
-        ],
-        "model": null
-    }
 };
 
 // populate model select
@@ -92,12 +56,14 @@ for (var item in available_models) {
     model_select.add(option);
 }
 
-var current_model_name = "microsoft-coco";
-var current_model_version = 9;
-const API_KEY = "rf_U7AD2Mxh39N7jQ3B6cP8xAyufLH3";
+var current_model_name = "amongus2_0";
+var current_model_version = 2;
+const API_KEY = "rf_u9ZrdhV88sbVpYmrFngn3vfFOOB3";
 const DETECT_API_KEY = "4l5zOVomQmkAqlTJPVKN";
-const CAMERA_ACCESS_URL = "https://uploads-ssl.webflow.com/5f6bc60e665f54545a1e52a5/63d40cd1de273045d359cf9a_camera-access2.png";
-const LOADING_URL = "https://uploads-ssl.webflow.com/5f6bc60e665f54545a1e52a5/63d40cd2210b56e0e33593c7_loading-camera2.gif";
+const CAMERA_ACCESS_URL =
+    "https://uploads-ssl.webflow.com/5f6bc60e665f54545a1e52a5/63d40cd1de273045d359cf9a_camera-access2.png";
+const LOADING_URL =
+    "https://uploads-ssl.webflow.com/5f6bc60e665f54545a1e52a5/63d40cd2210b56e0e33593c7_loading-camera2.gif";
 var webcamLoop = false;
 var no_detection_count = 0;
 var canvas_painted = false;
