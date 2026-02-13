@@ -27,12 +27,12 @@ var color_choices = [
 
 var available_models = {
   "microsoft-coco": {
-    name: "testing",
+    name: "Microsoft COCO",
     version: 9,
     video: "",
     confidence: 0.6,
     imageGrid: [
-      "https://static.wikia.nocookie.net/versus-compendium/images/5/5f/Impostor.png/revision/latest?cb=20200912190532",
+      "https://media.roboflow.com/homepage/000000000544_jpg.rf.f588881eb2c2829187797d304e3a941d.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1675241561128",
       "https://media.roboflow.com/homepage/000000000064_jpg.rf.654457cc709530d859531d38bb990ec8.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1675241561271",
       "https://media.roboflow.com/homepage/000000000321_jpg.rf.c38501b6894584ac21c859cd4390e75e.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1675241561164",
       "https://media.roboflow.com/homepage/000000000250_jpg.rf.47b3fb8b6ed29e369cc361720b5f21f5.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1675241560704",
